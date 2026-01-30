@@ -1,0 +1,294 @@
+/**
+ * Tag Brand Design Tokens
+ * Complete CSS custom properties for Tag brand implementation
+ * 
+ * Usage: Copy this entire file or import specific sections as needed.
+ * Font: Add to HTML head:
+ * <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+ */
+
+:root {
+  /* ============================================
+     COLORS
+     ============================================ */
+  
+  /* Primary Brand Color */
+  --tag-electric-yellow: #F8E600;
+  --tag-electric-yellow-rgb: 248, 230, 0;
+  
+  /* Neutral Colors */
+  --tag-black: #000000;
+  --tag-black-rgb: 0, 0, 0;
+  
+  --tag-white: #FFFFFF;
+  --tag-white-rgb: 255, 255, 255;
+  
+  --tag-light-grey: #DFE6EF;
+  --tag-light-grey-rgb: 223, 230, 239;
+  
+  --tag-dark-grey: #C9D1D8;
+  --tag-dark-grey-rgb: 201, 209, 216;
+  
+  /* Highlight Colors (CTAs & Accents Only) */
+  --tag-highlight-blue: #0163E5;
+  --tag-highlight-blue-rgb: 1, 99, 229;
+  
+  --tag-highlight-orange: #FF4B00;
+  --tag-highlight-orange-rgb: 255, 75, 0;
+  
+  /* Semantic Color Aliases */
+  --tag-color-primary: var(--tag-electric-yellow);
+  --tag-color-background: var(--tag-white);
+  --tag-color-background-alt: var(--tag-light-grey);
+  --tag-color-background-dark: var(--tag-black);
+  --tag-color-text: var(--tag-black);
+  --tag-color-text-inverse: var(--tag-white);
+  --tag-color-cta-primary: var(--tag-highlight-blue);
+  --tag-color-cta-secondary: var(--tag-highlight-orange);
+  
+  /* ============================================
+     TYPOGRAPHY
+     ============================================ */
+  
+  /* Font Family */
+  --tag-font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  /* Font Weights */
+  --tag-font-weight-regular: 400;
+  --tag-font-weight-medium: 500;
+  --tag-font-weight-semibold: 600;
+  
+  /* Font Sizes - Golden Ratio Scale (1.618) */
+  --tag-text-xs: 0.625rem;      /* 10px */
+  --tag-text-sm: 0.75rem;       /* 12px */
+  --tag-text-base: 1rem;        /* 16px - body */
+  --tag-text-lg: 1.125rem;      /* 18px */
+  --tag-text-xl: 1.618rem;      /* ~26px */
+  --tag-text-2xl: 2.618rem;     /* ~42px */
+  --tag-text-3xl: 4.236rem;     /* ~68px */
+  --tag-text-4xl: 6.854rem;     /* ~110px */
+  --tag-text-5xl: 11.089rem;    /* ~177px - hero */
+  
+  /* Line Heights */
+  --tag-leading-none: 1;
+  --tag-leading-tight: 1.1;
+  --tag-leading-snug: 1.25;
+  --tag-leading-normal: 1.5;
+  --tag-leading-relaxed: 1.625;
+  --tag-leading-loose: 2;
+  
+  /* Letter Spacing */
+  --tag-tracking-tighter: -0.05em;
+  --tag-tracking-tight: -0.025em;
+  --tag-tracking-normal: 0;
+  --tag-tracking-wide: 0.025em;
+  --tag-tracking-wider: 0.05em;
+  
+  /* ============================================
+     SPACING
+     ============================================ */
+  
+  /* Base unit: 4px */
+  --tag-space-px: 1px;
+  --tag-space-0: 0;
+  --tag-space-0-5: 0.125rem;    /* 2px */
+  --tag-space-1: 0.25rem;       /* 4px */
+  --tag-space-1-5: 0.375rem;    /* 6px */
+  --tag-space-2: 0.5rem;        /* 8px */
+  --tag-space-2-5: 0.625rem;    /* 10px */
+  --tag-space-3: 0.75rem;       /* 12px */
+  --tag-space-3-5: 0.875rem;    /* 14px */
+  --tag-space-4: 1rem;          /* 16px */
+  --tag-space-5: 1.25rem;       /* 20px */
+  --tag-space-6: 1.5rem;        /* 24px */
+  --tag-space-7: 1.75rem;       /* 28px */
+  --tag-space-8: 2rem;          /* 32px */
+  --tag-space-9: 2.25rem;       /* 36px */
+  --tag-space-10: 2.5rem;       /* 40px */
+  --tag-space-11: 2.75rem;      /* 44px */
+  --tag-space-12: 3rem;         /* 48px */
+  --tag-space-14: 3.5rem;       /* 56px */
+  --tag-space-16: 4rem;         /* 64px */
+  --tag-space-20: 5rem;         /* 80px */
+  --tag-space-24: 6rem;         /* 96px */
+  --tag-space-28: 7rem;         /* 112px */
+  --tag-space-32: 8rem;         /* 128px */
+  --tag-space-36: 9rem;         /* 144px */
+  --tag-space-40: 10rem;        /* 160px */
+  --tag-space-44: 11rem;        /* 176px */
+  --tag-space-48: 12rem;        /* 192px */
+  --tag-space-52: 13rem;        /* 208px */
+  --tag-space-56: 14rem;        /* 224px */
+  --tag-space-60: 15rem;        /* 240px */
+  --tag-space-64: 16rem;        /* 256px */
+  --tag-space-72: 18rem;        /* 288px */
+  --tag-space-80: 20rem;        /* 320px */
+  --tag-space-96: 24rem;        /* 384px */
+  
+  /* Container Margins (5-10% of shortest side) */
+  --tag-margin-container: clamp(5vmin, 7.5vmin, 10vmin);
+  --tag-margin-container-sm: 5vmin;
+  --tag-margin-container-lg: 10vmin;
+  
+  /* ============================================
+     BORDER RADIUS
+     ============================================ */
+  
+  --tag-radius-none: 0;
+  --tag-radius-sm: 0.125rem;    /* 2px */
+  --tag-radius-default: 0.25rem; /* 4px */
+  --tag-radius-md: 0.375rem;    /* 6px */
+  --tag-radius-lg: 0.5rem;      /* 8px */
+  --tag-radius-xl: 0.75rem;     /* 12px */
+  --tag-radius-2xl: 1rem;       /* 16px */
+  --tag-radius-3xl: 1.5rem;     /* 24px */
+  --tag-radius-full: 9999px;
+  
+  /* ============================================
+     SHADOWS
+     ============================================ */
+  
+  --tag-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --tag-shadow-default: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --tag-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --tag-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --tag-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --tag-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --tag-shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  --tag-shadow-none: 0 0 #0000;
+  
+  /* Brand-specific shadows */
+  --tag-shadow-yellow: 0 4px 14px -2px rgba(248, 230, 0, 0.4);
+  --tag-shadow-blue: 0 4px 14px -2px rgba(1, 99, 229, 0.4);
+  --tag-shadow-orange: 0 4px 14px -2px rgba(255, 75, 0, 0.4);
+  
+  /* ============================================
+     TRANSITIONS & ANIMATIONS
+     ============================================ */
+  
+  /* Durations */
+  --tag-duration-75: 75ms;
+  --tag-duration-100: 100ms;
+  --tag-duration-150: 150ms;
+  --tag-duration-200: 200ms;
+  --tag-duration-300: 300ms;
+  --tag-duration-500: 500ms;
+  --tag-duration-700: 700ms;
+  --tag-duration-1000: 1000ms;
+  
+  /* Easing Functions */
+  --tag-ease-linear: linear;
+  --tag-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --tag-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --tag-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Tag-specific easing (more refined) */
+  --tag-ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --tag-ease-in-out-expo: cubic-bezier(0.65, 0, 0.35, 1);
+  --tag-ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+  
+  /* Common Transitions */
+  --tag-transition-colors: color var(--tag-duration-150) var(--tag-ease-in-out),
+                           background-color var(--tag-duration-150) var(--tag-ease-in-out),
+                           border-color var(--tag-duration-150) var(--tag-ease-in-out);
+  --tag-transition-opacity: opacity var(--tag-duration-150) var(--tag-ease-in-out);
+  --tag-transition-shadow: box-shadow var(--tag-duration-150) var(--tag-ease-in-out);
+  --tag-transition-transform: transform var(--tag-duration-150) var(--tag-ease-in-out);
+  --tag-transition-all: all var(--tag-duration-150) var(--tag-ease-in-out);
+  
+  /* ============================================
+     Z-INDEX SCALE
+     ============================================ */
+  
+  --tag-z-0: 0;
+  --tag-z-10: 10;
+  --tag-z-20: 20;
+  --tag-z-30: 30;
+  --tag-z-40: 40;
+  --tag-z-50: 50;
+  --tag-z-auto: auto;
+  
+  /* Semantic z-index */
+  --tag-z-dropdown: 1000;
+  --tag-z-sticky: 1020;
+  --tag-z-fixed: 1030;
+  --tag-z-modal-backdrop: 1040;
+  --tag-z-modal: 1050;
+  --tag-z-popover: 1060;
+  --tag-z-tooltip: 1070;
+  
+  /* ============================================
+     BREAKPOINTS (for reference in media queries)
+     ============================================ */
+  
+  /* 
+   * Usage in media queries:
+   * @media (min-width: 640px) { } -- sm
+   * @media (min-width: 768px) { } -- md
+   * @media (min-width: 1024px) { } -- lg
+   * @media (min-width: 1280px) { } -- xl
+   * @media (min-width: 1536px) { } -- 2xl
+   */
+  --tag-screen-sm: 640px;
+  --tag-screen-md: 768px;
+  --tag-screen-lg: 1024px;
+  --tag-screen-xl: 1280px;
+  --tag-screen-2xl: 1536px;
+  
+  /* ============================================
+     GRID SYSTEM
+     ============================================ */
+  
+  --tag-grid-columns: 4;
+  --tag-grid-gap: var(--tag-space-4);
+  --tag-grid-margin: var(--tag-margin-container);
+}
+
+/* ============================================
+   DARK MODE OVERRIDES
+   ============================================ */
+
+[data-theme="dark"],
+.tag-dark {
+  --tag-color-background: var(--tag-black);
+  --tag-color-background-alt: #1a1a1a;
+  --tag-color-text: var(--tag-white);
+  --tag-color-text-inverse: var(--tag-black);
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* Typography */
+.tag-headline {
+  font-family: var(--tag-font-family);
+  font-weight: var(--tag-font-weight-semibold);
+  line-height: var(--tag-leading-tight);
+  letter-spacing: var(--tag-tracking-tight);
+}
+
+.tag-subheadline {
+  font-family: var(--tag-font-family);
+  font-weight: var(--tag-font-weight-medium);
+  line-height: var(--tag-leading-snug);
+}
+
+.tag-body {
+  font-family: var(--tag-font-family);
+  font-weight: var(--tag-font-weight-regular);
+  line-height: var(--tag-leading-normal);
+}
+
+/* Colors */
+.tag-bg-yellow { background-color: var(--tag-electric-yellow); }
+.tag-bg-black { background-color: var(--tag-black); }
+.tag-bg-white { background-color: var(--tag-white); }
+.tag-bg-light-grey { background-color: var(--tag-light-grey); }
+.tag-bg-dark-grey { background-color: var(--tag-dark-grey); }
+
+.tag-text-black { color: var(--tag-black); }
+.tag-text-white { color: var(--tag-white); }
+.tag-text-yellow { color: var(--tag-electric-yellow); }
+.tag-text-blue { color: var(--tag-highlight-blue); }
+.tag-text-orange { color: var(--tag-highlight-orange); }
