@@ -3,7 +3,7 @@
 # IT'LL BREAK IF YOU DON'T
 # WARNED YOU
 
-SOURCE="$HOME/Desktop/personal/code/skills"
+SOURCE="$HOME/Desktop/personal/code/skills" # CHANGE THIS PATH TO WHERE YOUR SKILLS FOLDER IS
 CLAUDE_TARGET="$HOME/.claude/skills"
 CODEX_TARGET="$HOME/.codex/skills"
 
