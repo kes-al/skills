@@ -1,7 +1,11 @@
 #!/bin/bash
+# MAKE SURE YOU CHANGE THE PATHS BELOW TO MATCH YOUR SETUP
+# IT'LL BREAK IF YOU DON'T
+# WARNED YOU
 
-SOURCE="$HOME/Desktop/personal/code/claude/skills"
-TARGET="$HOME/.claude/skills"
+SOURCE="$HOME/Desktop/personal/code/skills"
+CLAUDE_TARGET="$HOME/.claude/skills"
+CODEX_TARGET="$HOME/.codex/skills"
 
 if [ ! -d "$SOURCE" ]; then
   echo "Error: Source directory $SOURCE does not exist."
@@ -9,11 +13,13 @@ if [ ! -d "$SOURCE" ]; then
 fi
 
 mkdir -p "$HOME/.claude"
+mkdir -p "$HOME/.codex"
 
-if [ -e "$TARGET" ] || [ -L "$TARGET" ]; then
-  echo "Removing existing $TARGET"
-  rm -rf "$TARGET"
-fi
-
-ln -s "$SOURCE" "$TARGET"
-echo "Symlinked $TARGET -> $SOURCE"
+for TARGET in "$CLAUDE_TARGET" "$CODEX_TARGET"; do
+  if [ -e "$TARGET" ] || [ -L "$TARGET" ]; then
+    echo "Removing existing $TARGET"
+    rm -rf "$TARGET"
+  fi
+  ln -s "$SOURCE" "$TARGET"
+  echo "Symlinked $TARGET -> $SOURCE"
+done
