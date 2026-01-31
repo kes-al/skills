@@ -36,21 +36,21 @@ done
 ```
 
 general utils
-md-to-docx: i made this to convert ai generated markdown to nicely formatted word docs so i don't have to do it manually
-research: enables field selection -> deep research -> report
+- md-to-docx: i made this to convert ai generated markdown to nicely formatted word docs so i don't have to do it manually
+- research: enables field selection -> deep research -> report
 
 best practices
-vercel-best-practices: well, vercel best practices
-expo-*: for expo dev
-supabase-postgres-best-practices: not just for the mcp, but general postgres
-remotion-best-practices: haven't used it but the name also sounds good
+- vercel-best-practices: well, vercel best practices
+- expo-*: for expo dev
+- supabase-postgres-best-practices: not just for the mcp, but general postgres
+- remotion-best-practices: haven't used it but the name also sounds good
 
 testing
-ui-tester: functional testing for ui aside states
-test-driven-development: run this anytime you're focused on TDD (which should be always)
+- ui-tester: functional testing for ui aside states
+- test-driven-development: run this anytime you're focused on TDD (which should be always)
 
 ui
-tag-brand-font-end: apply tag branding to ui
-building-native-ui: haven't used it but the name sounds good
+- tag-brand-font-end: apply tag branding to ui
+- building-native-ui: haven't used it but the name sounds good
 
 
