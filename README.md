@@ -1,3 +1,5 @@
+brian, i couldn't figure out your skills repo in tag-ams =X
+
 expected behavior: your local skills dir (wherever this repo lives) will be symlinked to ~/.claude/skills/ & ~/.codex/skills so you can keep this repo up to date and sync across computers
 
 to use:
