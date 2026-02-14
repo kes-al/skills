@@ -127,6 +127,8 @@ Confirm:
 
 **Test errors?** Fix error, re-run until it fails correctly.
 
+**Import errors are not red.** If pytest shows `ERROR` or `ImportError`/`ModuleNotFoundError`, the test never executed. This means the production stub is missing imports or signatures that the test needs to resolve. Add minimal stubs (empty classes, functions that raise `NotImplementedError`, missing imports) until the test runs and fails on an assertion. Only then do you have real red.
+
 ### GREEN - Minimal Code
 
 Write simplest code to pass the test.
